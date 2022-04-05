@@ -1,0 +1,6 @@
+Django==4.0.3
+django-admin==2.0.1
+djangorestframework==3.13.1
+djangorestframework-simplejwt
+requests
+pdbpp
