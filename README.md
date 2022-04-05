@@ -36,7 +36,7 @@ Response Format:
 ```
 
 ##### NOTE - All API calls are authenticated hence before API call add the token generated in Header
-###### {"Authorizarion": "Bearer <Your Token>""}
+###### {"Authorizarion": "Bearer "your_token_here""}
 #
 ##### 2. Publish Bond
 Request-type: POST
@@ -82,7 +82,7 @@ Response Format:
 
 ##### 4. Get bond by publication_id
 Request-type: GET
-API: http://0.0.0.0:8000/bond/api/<int:publication_id>
+API: http://0.0.0.0:8000/bond/api/{int:publication_id}
 Response Format: 
 ```
 [
@@ -106,7 +106,7 @@ In case if publication_id doesn't exist API throws error as
 
 ##### 5. Purchase bond by publication_id
 Request-type: PUT
-API: http://0.0.0.0:8000/bond/api/<int:publication_id>/
+API: http://0.0.0.0:8000/bond/api/{int:publication_id}/
 Response Format: 
 ```
 {
@@ -152,7 +152,7 @@ Response Format:
 ```
 ##### 7. Update published bond
 Request-type: PUT
-API: http://0.0.0.0:8000/bond/api/update/<int:publication_id>/
+API: http://0.0.0.0:8000/bond/api/update/{int:publication_id}/
 
 Payload:
 ```
@@ -198,7 +198,7 @@ NOTE - Only user who created the bond can update the bond, once bond is purchase
 ```
 ##### 8. Delete published bond
 Request-type: PUT
-API: http://0.0.0.0:8000/bond/api/delete/<int:publication_id>/
+API: http://0.0.0.0:8000/bond/api/delete/{int:publication_id}/
 Response Format: 
 ```
 {
