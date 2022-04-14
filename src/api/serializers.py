@@ -10,6 +10,7 @@ class UserSerializer(serializers.ModelSerializer):
 
 
 class BondSerializer(serializers.ModelSerializer):
+
     class Meta:
         model = Bond
         fields = [
@@ -24,6 +25,7 @@ class BondSerializer(serializers.ModelSerializer):
 
 
 class BondUSDSerializer(serializers.ModelSerializer):
+
     class Meta:
         model = Bond
         fields = [

@@ -51,8 +51,12 @@ class CreateBond(APIView):
         serializer = serializers.BondSerializer(data=data)
         if serializer.is_valid():
             serializer.save()
+            data = serializer.data
+            data.update({
+                "success": "Bond Published Successfully by user"
+            })
             return Response(
-                {"success": "Bond Published Successfully by user "},
+                data=data,
                 status=status.HTTP_201_CREATED,
             )
         print(serializer.errors)
@@ -215,7 +219,4 @@ class UpdateBond(APIView):
             )
         else:
             bond_instance.delete()
-            return Response(
-                {"message": "Bond Item is deleted successfully!"},
-                status=status.HTTP_204_NO_CONTENT,
-            )
+            return Response({'message': 'Bond Item is deleted successfully!'}, status=status.HTTP_200_OK)

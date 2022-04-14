@@ -1,6 +1,6 @@
 Django==4.0.3
 django-admin==2.0.1
 djangorestframework==3.13.1
-djangorestframework-simplejwt
-requests
-pdbpp
+djangorestframework-simplejwt==5.1.*
+requests==2.27.*
+Faker==13.3.
